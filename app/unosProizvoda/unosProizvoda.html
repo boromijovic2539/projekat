@@ -1,0 +1,47 @@
+<h4>Dodaj proizvod</h4>
+<div class="forma">
+	<form role="form" [ngFormModel]="registerForm"  >
+        <div class="vazi">
+            <input type="text" placeholder="Naziv proizvoda" ngControl="naziv" required/>
+        </div>
+        <div class="vazi">
+            <label  for="tip" >Tip:</label>
+            <br/>
+            <select ng-selected="meso" class="meni" placeholder="tip" ngControl='tip'>
+				<option value="povrce" >povrce</option>
+                <option value="voce" >voce</option>
+                <option value="meso" >meso</option>
+                <option value="mlecni proizvodi i jaja" >mleko</option>
+            </select>
+        </div>
+        <div class="vazi">
+            <input type="number" placeholder="Cena" ngControl="cena" required/>
+        </div>
+        <div class="vazi">
+            <input type="text" placeholder="Glikemijski indeks" ngControl="glikemijski_indeks" required/>
+        </div>
+		
+		<div class="vazi">
+            <label  for="tip" >Farma:</label>
+            <br/>
+            <select ng-selected="Mijovic" class="meni" placeholder="farma" ngControl='farma'>
+				<option value="1" >Lazic</option>
+                <option value="2" >Mijovic</option>
+                <option value="3" >Babic</option>
+                <option value="4" >Stricic</option>
+				<option value="5" >Blagojevic</option>
+                <option value="6" >Soldatovic</option>
+                <option value="7" >Pusonja</option>
+            </select>
+        </div>
+		
+		<div class="vazi">
+        <input type="text" name="slika" ngControl="slika" placeholder="Naziv slike" id="slika">
+		<br/>
+		 </div>
+		<div class="vazi">
+            <button (click)="dodajProizvod()">Dodaj Proizvod</button>
+		 </div>
+    <br/>
+ </form>
+</div>

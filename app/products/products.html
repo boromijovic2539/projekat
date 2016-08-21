@@ -1,0 +1,70 @@
+<div class="container_12">
+
+    <div class="grid_12">
+	  
+      <h3 class="mb0">Products</h3>
+    </div>
+	
+	
+	<div class="grid_8 prefix_2">
+      <div id="mi-slider" class="mi-slider">
+          <ul>
+            <li><img src="images/fruit1.jpg" alt="voce"></li>
+            <li><img src="images/veg1.jpg" alt="povrce"></li>
+            <li><img src="images/meat1.jpg" alt="meso"></li>
+			<li><img src="images/dier1.jpg" alt="mlecni proizvodi"></li>
+          </ul>
+       
+        
+          <nav>
+            <a (click)="getVoce()">fruits</a>
+            <a (click)="getPovrce()">vegetables</a>
+            <a (click)="getMeso()">meat</a>
+            <a (click)="getMlecni()">dairy</a>
+          </nav>
+        </div>
+    </div>
+	
+	
+	
+    <div class="clear"></div>
+    <div class="prod">
+	
+      <div class="grid_3" *ngFor = "#item of proizvodi">
+	  
+
+        <div class="box">
+		 <form  [ngFormModel]="korpaForm" >
+          <div class="maxheight" name="proizvodOdabir"><a href="" class="gal"><img src={{item.slika}} width="180" height="135" alt=""></a><a href="#">{{item.naziv}}</a></div>
+		  <input type="text" min="100" max="3000" ngControl="kolicina" >
+		  <button class="korpa" type="submit" (click)="ubaciUKorpu(item)"><img src="images/korpa.PNG"  width="30" height="30" alt="submit"/></button>
+		 </form>
+        </div>
+
+		</div>
+		 
+	
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

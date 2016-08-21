@@ -1,0 +1,27 @@
+[
+  {
+    "naziv": "Kelj",
+    "cena": "787",
+    "slika":"images/big3.jpg"
+  },
+  {
+    "naziv": "Kruska",
+    "cena": "87",
+    "slika":"images/big6.jpg"  
+	},
+  {
+    "naziv": "Ananas",
+    "cena": "8",
+    "slika":"images/big7.jpg"
+  },
+  {
+    "naziv": "Tresnja",
+    "cena": "5",
+    "slika":"images/big8.jpg"
+  },
+  {
+    "naziv": "Visnja",
+    "cena": "55",
+    "slika":"images/big6.jpg"
+  }
+]

@@ -1,0 +1,41 @@
+<div class="container">
+	<form class="navbar-form" role="search">
+		<h3>Pretrazi korisnike:</h3>
+		<div class="form-group">
+			<input type="text" class="form-control" placeholder="Pretraži po nazivu username-u" [(ngModel)]="username">
+		</div>
+	</form><br/>
+	<form class="navbar-form" role="search">
+		<div class="form-group">
+			<input type="text" class="form-control" placeholder="Pretraži po imenu" [(ngModel)]="firstName">
+		</div>
+	</form>
+
+	<div class="col-lg-12">
+		<br/><h3>Korisnici</h3>
+		<table id="example" class="display" cellspacing="0">
+		
+		<thead>
+			<tr>
+				<th>ID: </th>
+				<th>Ime: </th>
+				<th>Prezime: </th>
+				<th>Username: </th>
+				<th>Admin: </th>
+			</tr>
+			</thead>
+
+			<tbody>
+	   <tr *ngFor="#korisnik of korisnici| SearchPipeIme: firstName | SearchPipeUsername: username" >
+			
+			<th>{{korisnik.id_korisnik}}</th>
+			<th>{{korisnik.firstName}}</th>
+			<th>{{korisnik.lastName}}</th>
+			<th>{{korisnik.username}}</th>
+			<th>{{korisnik.admin}}</th>
+			<td><button class="btnremove" (click)="deleteKorisnik(korisnik)" >Obrisi</button></td>
+		</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

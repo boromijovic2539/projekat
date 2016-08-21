@@ -1,0 +1,17 @@
+
+#textSlider{
+    position: relative;
+    left: 0;
+}
+#textSlider ul{
+    list-style: none;
+}
+#textSlider ul li{
+    position: relative;
+    left: -300px;
+}
+ .clear{
+    clear: both;
+}
+
+

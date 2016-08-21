@@ -1,0 +1,22 @@
+<h4>Dodaj farmu</h4>
+<div class="forma">
+	<form role="form" [ngFormModel]="registerForm"  >
+        <div class="vazi">
+            <input type="text" placeholder="Naziv farme" ngControl="naziv" required/>
+        </div>
+        <div class="vazi">
+            <input type="text"  placeholder="Podneblje" ngControl="podneblje" required/>
+        </div>
+        <div class="vazi">
+            <input type="text" placeholder="Telefon" ngControl="telefon" required/>
+        </div>
+		<div class="vazi">
+            <input type="text" placeholder="Adresa" ngControl="adresa" required/>
+        </div>
+
+		<div class="vazi">
+            <button type="submit" (click)="dodajFarmu($event)">Dodaj Farmu</button>
+		 </div>
+    <br/>
+ </form>
+</div>

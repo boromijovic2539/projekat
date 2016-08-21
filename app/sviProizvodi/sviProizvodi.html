@@ -1,0 +1,41 @@
+<div class="container">
+	<form class="navbar-form" role="search">
+		<h3>Pretrazi proizvode:</h3>
+		<div class="form-group">
+			<input type="text" class="form-control" style="color:black;" placeholder="Pretraži po nazivu" [(ngModel)]="naziv">
+		</div>
+	</form><br/>
+	<form class="navbar-form" role="search">
+		<div class="form-group">
+			<input type="text" class="form-control" placeholder="Pretraži po glikemijskom indeksu" [(ngModel)]="glikemijski_indeks">
+		</div>
+	</form>
+
+	<div class="col-lg-12">
+		<br/><h3>Proizvodi</h3>
+		<table id="example" class="display" cellspacing="0">
+		
+		<thead>
+			<tr>
+				<th>Naziv: </th>
+				<th>Tip: </th>
+				<th>Cena: </th>
+				<th>GI: </th>
+				<th>Farma: </th>
+			</tr>
+			</thead>
+
+			<tbody>
+	   <tr *ngFor="#proizvod of proizvodi| SearchPipeNaziv: naziv | SearchPipeGi: glikemijski_indeks" >
+
+			<th>{{proizvod.naziv}}</th>
+			<th>{{proizvod.tip}}</th>
+			<th>{{proizvod.cena}}</th>
+			<th>{{proizvod.glikemijski_indeks}}</th>
+			<th>{{proizvod.id_farma}}</th>
+			<td><button class="btnremove" (click)="deleteProixvod(proizvod)" >Obrisi</button></td>
+		</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

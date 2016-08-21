@@ -1,0 +1,41 @@
+ <div class="container_12">
+    <div class="grid_5">
+      <h3>Contact Info</h3>
+            <div class="map">
+            <figure class="img_inner fleft">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.773780491568!2d20.452865650545213!3d44.826173078995964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a65360d5e9f75%3A0xf20ea97e5383e38a!2z0KLQsNC00LXRg9GI0LAg0JrQvtGI0ZvRg9C60LA!5e0!3m2!1ssr!2srs!4v1464453698589" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+               </figure>
+               <p>Tadeuša Košćuška 63, Beograd
+               </p>
+          </div>
+    </div>
+    <div class="grid_6 prefix_1">
+      <h3>Contact Form</h3>
+      <form id="form" method="POST" [ngFormModel]="registerForm" >
+      <div class="success_wrapper">
+      <div class="success">Contact form submitted!<br>
+      <strong>We will be in touch soon.</strong> </div></div>
+      <fieldset>
+      <label class="name" for="name">
+      <input type="text" placeholder="Name:"    ngControl="tvojeime"  required aria-required=”true”>
+      <br class="clear">
+     </label>
+     <label class="email" for="email">
+      <input type="email" placeholder= "E-Mail:"   ngControl="naslov"  required aria-required=”true” >
+      <br class="clear">
+     </label>
+      <label class="message">
+      <textarea required ngControl="poruka"
+                aria-required=”true” >Message:</textarea>
+      <br class="clear">
+    </label>
+      <div class="clear" ></div>
+          <button type="submit" (click)="onSubmit()" >Kontaktiraj nas</button>
+      </fieldset></form>
+      <div class="st1">
+       <br>
+      E-mail: <span class="col1"><a href="#">anic.org.korisnik@gmail.com</a></span><br>
+      Telefon: 011/324-324
+      </div>
+    </div>
+  </div>

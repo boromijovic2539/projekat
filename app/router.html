@@ -1,0 +1,74 @@
+<header> 
+  <div class="container_12">
+  <div class="login-form">
+   <a class="korpa" *ngIf="isAuth == 'user'" [routerLink]="['./Korpa']"><img src="images/korpa.PNG"  alt="korpa" /></a>
+  </div>
+ <div class="grid_12"> 
+	   <div style='color:white;padding:10px;text-align:center;width:200px;height:100px;font-size:15px;position:absolute;right:0;display:inline;top:0'>
+		     <nav >
+               <ul style="display: inline">
+                   <li style="display: inline" *ngIf="isAuth == 'no'"><a [routerLink]="['./Login']">Login  </a></li>
+                   <li style="display: inline" *ngIf="isAuth == 'no'">|</li>
+                   <li style="display: inline" *ngIf="isAuth == 'no'"><a [routerLink]="['./Register']" >   Register</a></li>
+                   <li style="display: inline" *ngIf="isAuth == 'admin' || isAuth == 'user'"><a (click)="onLogout()">Logout</a></li>
+                   </ul>
+           </nav>
+		</div>
+    <div><a  [routerLink]="['./About']"><img src="images/logo2.png" alt="Anic.org"></a></div>
+    <div class="menu_block">
+
+     <nav  class="" >
+      <ul class="sf-menu">
+         <li class="active" *ngIf="isAuth == 'no' || isAuth == 'user'"><a [routerLink]="['./About']">About</a></li>
+         <li *ngIf="isAuth == 'no' || isAuth == 'user'"><a [routerLink]="['./Products']">Products</a></li>
+         <li *ngIf="isAuth == 'no' || isAuth == 'user'"><a [routerLink]="['./Recipes']">Recipes</a></li>
+         <li *ngIf="isAuth == 'no' || isAuth == 'user'"><a [routerLink]="['./Contact']">Contacts</a></li>
+		 <li *ngIf="isAuth == 'admin'"><a [routerLink]="['./UnosProizvoda']">DodajProizvod</a></li>   
+		 <li *ngIf="isAuth == 'admin'"><a [routerLink]="['./SviProizvodi']">SviProizvodi</a></li> 	
+		 <li *ngIf="isAuth == 'admin'"><a [routerLink]="['./DodajFarmu']">DodajFarmu</a></li> 			
+		 <li *ngIf="isAuth == 'admin'"><a [routerLink]="['./SveFarme']">SveFarme</a></li> 	
+		 <li *ngIf="isAuth == 'admin'"><a [routerLink]="['./SviKorisnici']">SviKorisnici</a></li> 			 
+       </ul>
+    </nav>
+    
+ <div class="clear"></div>
+</div>
+<div class="clear"></div>
+          </div>
+  
+      </div>
+</header>
+
+
+<div class="content">
+	<router-outlet></router-outlet>
+</div>
+
+<div class="dole">
+<div class="bottom_block">
+    <div class="container_12">
+      <div class="grid_10 prefix_1">
+        <div class="clear"></div>
+          <div class="socials">
+            <a href="https://www.facebook.com/"><i class=" icon-facebook"></i></a>
+            <a href="https://twitter.com/"><i  class="icon-twitter"></i></a>
+            <a href="https://www.google.rs/"><i class=" icon-google-plus "></i></a>
+            <a href="https://www.pinterest.com/"><i class=" icon-pinterest"></i></a>
+          </div>
+        
+      </div>
+    </div>
+</div>
+
+
+<footer>    
+  <div class="container_12">
+    <div class="grid_12">
+
+      <div class="copy">
+      Anic.org  (C) 2016 | <a href="#">Privacy Policy</a> | Designed by Petra, Jovana, Boro
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>

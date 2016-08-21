@@ -1,0 +1,35 @@
+<div class="container">
+	<form class="navbar-form" role="search">
+		<h3>Pretrazi sobe:</h3>
+		<div class="form-group">
+			<input type="text" class="form-control" placeholder="Pretraži po nazivu farme" [(ngModel)]="naziv">
+		</div>
+	</form><br/>
+	<form class="navbar-form" role="search">
+		<div class="form-group">
+			<input type="text" class="form-control" placeholder="Pretraži po podneblju" [(ngModel)]="podneblje">
+		</div>
+	</form>
+
+	<div class="col-lg-12">
+		<br/><h3>Farme</h3>
+		<table id="example" class="display" cellspacing="0">
+		
+		<thead>
+			<tr>
+				<th>Naziv: </th>
+				<th>Podneblje: </th>
+			</tr>
+			</thead>
+
+			<tbody>
+	   <tr *ngFor="#farma of farme| SearchPipeNazivFarme: naziv | SearchPipePodneblje: podneblje">
+
+			<th>{{farma.naziv}}</th>
+			<th>{{farma.podneblje}}</th>
+			<td><button class="btnremove" (click)="deleteFarma(farma)" >Obrisi</button></td>
+		</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

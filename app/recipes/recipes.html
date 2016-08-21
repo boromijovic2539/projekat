@@ -1,0 +1,33 @@
+
+<div class="container_12" onload="ispisi()">
+    <div class="grid_12">
+      <h3>Best Recipes</h3>
+    </div>
+	 <div class="grid_4_D">
+	
+      <h4>Gourmet Ideas</h4>
+	  
+      <ul class="list">
+        <li><a href="http://www.coolinarika.com/recepti/">Neke ideje za recept, odabrani linkovi</a></li>
+        <li><a href="http://www.coolinarika.com/recepti/">Neke ideje za recept, odabrani linkovi</a></li>
+        <li><a href="http://www.coolinarika.com/recepti/">Neke ideje za recept, odabrani linkovi</a></li>
+        <li><a href="http://www.coolinarika.com/recepti/">Neke ideje za recept, odabrani linkovi</a></li>
+      </ul>
+	  
+    </div>
+    <div class="grid_7" *ngFor = "#item of recepti">
+      
+	  <div class="rece"><img src={{item.slika}} alt="slika Recepta" class="img_inner fleft ">
+			  <h4 class="head2"><a href="#">{{item.naziv_recepta}}</a>
+			  </h4><p>{{item.opis_pripreme}}
+			  <br>
+			  <a href="#" class="link1">Learn More</a>
+	   </div>
+
+			  
+    </div>
+	
+ 
+	<div id="fileDisplayArea"></div>
+</div>
+

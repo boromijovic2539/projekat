@@ -1,0 +1,23 @@
+<div class="container_12">
+    <div class="naslov">
+      <h3>Korpa</h3>
+    </div>
+	<div class="racun">
+	   <h4  style="color: white;">Ukupno: {{kolRa}} rsd</h4>
+	   <button class="kupi">Kupi</button>
+	</div>
+	<div class="stavkeKorpa">
+		<div class="grid_7"  *ngFor = "#item of values">
+			<div class="box">	
+			  <div class="rec"><img src={{item.slika}}  width="200" height="150" alt="" class="img_inner fleft "><div class="extra_wrapper">
+				  <h4 class="head2"><a href="#">{{item.naziv}} </a></h4>
+				  <h4>Cena: {{item.cena}} rsd/kg</h4>
+				  <h4>Kolicina:{{item.kolicina}} g</h4>
+				  <h4>Ukupna cena:{{item.cena * item.kolicina / 1000}} rsd</h4>
+			   </div>
+			   <button class="delete" (click)="obrisiStavku(item)"><img src="images/close_red.PNG"  width="30" height="30" alt="korpa" /></button>
+			  </div>
+			</div>
+		</div>
+	</div>
+</div>
